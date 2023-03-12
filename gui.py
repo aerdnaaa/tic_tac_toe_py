@@ -12,6 +12,10 @@ class App(customtkinter.CTk):
         self.game = TicTacToe('X', 'O')
         self.btn_list = []
 
+        #TODO 
+        # need to center items
+        # add restart button
+        # do score tracking
         for index in range(9):
             self.btn_list.append(customtkinter.CTkButton(master=self, width=100, height=100, text="", command=lambda index=index: self.button_callback(index)))
             self.btn_list[index].grid(row=int(index/3), column=int(index%3), padx=5, pady=5)
